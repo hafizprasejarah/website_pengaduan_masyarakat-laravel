@@ -1,0 +1,9 @@
+Fitur-fitur yang harus di kerjakan
+
+1. Mendata orang yang sedang login
+2. Memfilter mana yang sudah di validasi dan belum di validasi 
+3. Merubah atau re design dashboard dan menggantikan nya dengan dashboard admin biasanya dan bukan laporan
+4. Merubah aturan atau menambahkan data yang di inputkan saat register seperti NIK dan No Handphone
+5. Menambahkan data di Single laporan
+6. Mengganti alamat dari menulis manual menjadi mengambil dari google maps
+7. Membuat view bukti bukti dan menambahkan fitur untk multiple select image

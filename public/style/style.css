@@ -1,0 +1,1598 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+:root {
+    --selection: #5a95e375;
+    --hitam: #444;
+    --ungu: #A0B5FF;
+    --hijau-status: #2FBD68;
+    --merah-delete: #EA0016;
+    --kuning-validasi: #FFB23C;
+    --putih: #fff;
+    --biru-btn: #3563E9;
+    --biru-teks: #0022d6;
+    --opsi-biru-btn: #62c2f6;
+    --putih-bg: #f6f7f9;
+    --scroll: rgba(255, 255, 255, 0.808);
+    --kuning: #F4D160;
+    --orange: #f39c12;
+    --border: .1rem solid rgba(0, 0, 0, 0.432);
+    --box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .1);
+    --border--putih: .1rem solid rgba(255, 255, 255, 0.432);
+
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--selection);
+    color: var(--putih);
+}
+
+
+
+
+/*=========================== NAVBAR MENU =============================*/
+/*=========================== NAVBAR MENU =============================*/
+/*=========================== NAVBAR MENU =============================*/
+.header {
+    width: 100%;
+    top: 0;
+    padding: .1rem 10rem;
+    display: flex;
+    background: var(--putih);
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #00000038;
+    position: fixed;
+    z-index: 999;
+    transition: top .3s ease;
+}
+
+.header.active {
+    top: -100%;
+}
+
+.header-title {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-title h3 {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-left: 1rem;
+    color: var(--biru-teks);
+    font-size: 1.5rem;
+
+}
+
+.header .logo {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header .logo img {
+    width: 100%;
+}
+
+.wrapper.img {
+    padding: 1rem;
+    display: flex;
+    padding: 10% 2rem;
+    width: 100%;
+    height: 100%;
+    align-items: unset;
+    justify-content: unset;
+
+}
+
+.wrapper img {
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*=========================== NAVBAR MENU =============================*/
+/*=========================== NAVBAR MENU =============================*/
+/*=========================== NAVBAR MENU =============================*/
+
+/*===========================element that we can use multiple --------=============================*/
+/*===========================element that we can use multiple --------=============================*/
+/*===========================element that we can use multiple --------=============================*/
+
+
+.wrapper {
+    padding: 1rem;
+    display: flex;
+    padding: 10% 2rem;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: var(--putih-bg);
+}
+
+
+
+.sub-wrapper {
+    max-width: 1200px;
+    width: 100%;
+}
+
+
+.main-title {
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+.btn-group {
+    display: inline-block;
+    /* background: #000; */
+}
+
+.btn {
+    color: var(--biru-teks);
+    border-radius: 10rem;
+    margin: 0rem .5rem;
+    padding: .7rem 2rem;
+    border: none;
+    outline: solid 1.5px var(--biru-teks);
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.09);
+}
+
+.btn.masuk {
+    color: var(--putih);
+    background-color: var(--biru-teks);
+}
+
+.box-input.invalid {
+    border: 2px solid var(--merah-delete);
+    margin: 1rem 0;
+}
+
+.invalid {
+    border-top: 2px solid var(--merah-delete);
+    border-left: 2px solid var(--merah-delete);
+    border-right: 2px solid var(--merah-delete);
+    border-bottom: 2px solid var(--merah-delete);
+}
+
+.invalid-feedback {
+    color: var(--merah-delete);
+    font-size: 1.4rem;
+}
+
+.message.absolute {
+    position: absolute;
+    top: 10rem;
+    align-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+.message {
+    align-self: start;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+.message.success {
+    color: var(--putih);
+    padding: 1rem 2rem;
+    background-color: #2fbd68a8;
+    display: flex;
+    align-items: center;
+}
+
+.message.Error {
+    color: var(--putih);
+    padding: 1rem 2rem;
+    background-color: #ea0017a1;
+}
+
+.message span {
+    font-size: 1.8rem;
+}
+
+.message i {
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+#profile {
+    cursor: pointer;
+}
+
+.container.dropdown {
+    display: none;
+    top: 200%;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    justify-content: right;
+
+}
+
+.container.dropdown button {
+    width: fit-content;
+    padding: 1rem 2rem;
+}
+
+
+.container.dropdown button i {
+    margin-left: 1rem;
+}
+
+.container.dropdown.active {
+    display: flex;
+}
+
+.btn-table {
+    padding: .4rem .8rem;
+    width: fit-content;
+    color: var(--putih);
+}
+
+.btn-table.edit {
+    border: none;
+    outline: none;
+    background-color: var(--biru-btn);
+}
+
+.btn-table.delete {
+    border: none;
+    outline: none;
+    background-color: var(--merah-delete);
+
+}
+
+.btn-table:hover {
+    transform: scale(1.09);
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination li {
+    display: inline;
+    margin: 0 4px;
+    list-style: none;
+}
+
+.pagination li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.pagination li a:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination li.active a {
+    background-color: var(--biru-btn);
+    border-color: var(--biru-btn);
+    color: #fff;
+}
+
+
+
+/*=============================== element that we can use multiple =======================================*/
+/*=============================== element that we can use multiple =======================================*/
+/*=============================== element that we can use multiple =======================================*/
+
+/*=============================== home-page-display =======================================*/
+/*=============================== home-page-display =======================================*/
+/*=============================== home-page-display =======================================*/
+
+.wrapper.bg {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 2rem;
+    background-image: linear-gradient(280deg, #62c2f6cd 55%, rgba(45, 45, 202, 0.767) 100%, #504e4ee2 100%), url(../img/background-header.jpg);
+}
+
+.main-title.title {
+    width: 50%;
+    font-size: 5rem;
+    background: transparent;
+    color: var(--putih);
+}
+
+.sub-title {
+    margin: 1rem 0;
+    color: var(--putih);
+    opacity: .8;
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+}
+
+.btn.lapor {
+    box-shadow: var(--box-shadow);
+    color: var(--putih);
+    letter-spacing: 1.5px;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--opsi-biru-btn);
+}
+
+.main-title.step {
+    color: var(--hitam);
+    padding: 1rem 0rem 11rem 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    color: var(--hitam);
+    margin: 0 1rem;
+    width: calc(100%/4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    border: var(--border--putih);
+}
+
+.card .wrapper-image-card {
+    width: 40%;
+}
+
+.card .wrapper-image-card img {
+    width: 100%;
+}
+
+.card h4 {
+    font-weight: 600;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+}
+
+/*=============================== home-page-display =======================================*/
+/*=============================== home-page-display =======================================*/
+/*=============================== home-page-display =======================================*/
+
+/*=============================== LOGIN-display || registrasi display  =======================================*/
+/*=============================== LOGIN-display || registrasi display  =======================================*/
+/*=============================== LOGIN-display || registrasi display  =======================================*/
+.container.login {
+    display: none;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 450%;
+    right: 0;
+    bottom: 0;
+}
+
+.container.login.active {
+    display: flex;
+    justify-content: center;
+}
+
+.container.registrasi {
+    display: none;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 450%;
+    right: 0;
+    bottom: 0;
+}
+
+.container.registrasi.active {
+    display: flex;
+    justify-content: center;
+}
+
+.register-column,
+.login-column {
+    width: 100%;
+}
+
+.form.login {
+    background-color: #ffffff8c;
+    box-shadow: var(--box-shadow);
+    border: var(--border--putih);
+    width: 40rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form.edit {
+    background: var(--putih);
+    box-shadow: var(--box-shadow);
+    border: var(--border--putih);
+    border-radius: 1rem;
+    min-height: 50rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form .title.login {
+    padding: 0 1rem 4rem 1rem;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+form .box-input {
+    width: 100%;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 2px solid #000;
+    outline: none;
+    font-size: 1.4rem;
+    /* padding: 1rem 1rem .5rem 0rem; */
+    margin: 2rem 0;
+}
+
+form .box-input-edit {
+    display: flex;
+    width: 40rem;
+    flex-direction: column;
+    font-size: 1.4rem;
+    padding: 1rem;
+    /* padding: 1rem 1rem .5rem 0rem; */
+    margin: 2rem 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+label {
+    color: var(--hitam);
+    margin-left: .5rem;
+    font-size: 1.4rem;
+}
+
+.btn.login {
+
+    margin-top: 5rem;
+    align-self: center;
+    width: fit-content;
+}
+
+.form p {
+    color: var(--hitam);
+}
+
+.form p a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--hitam);
+    font-weight: 600;
+}
+
+/*=============================== LOGIN-display || registrasi display =======================================*/
+/*=============================== LOGIN-display || registrasi display =======================================*/
+/*=============================== LOGIN-display || registrasi display  =======================================*/
+
+/*=============================== dashboard masyarakat display =======================================*/
+/*=============================== dashboard masyarakat display =======================================*/
+/*=============================== dashboard masyarakat display  =======================================*/
+.account-box {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.account-box .box-status {
+    margin-right: 1rem;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 60%;
+    background-color: var(--hijau-status);
+}
+
+.account-box .name {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+
+}
+
+.account-box #profile {
+    font-size: 2.5rem;
+}
+
+/*=============================== dashboard masyarakat display =======================================*/
+/*=============================== dashboard masyarakat display =======================================*/
+/*=============================== dashboard masyarakat display  =======================================*/
+.wrapper.dashboard {
+    padding: 10rem 2rem;
+    position: relative;
+    background-color: var(--putih-bg);
+}
+
+.sidebar {
+    border: 1px solid #0000002b;
+    padding-top: 7rem;
+    position: fixed;
+    z-index: 99;
+    background: var(--putih);
+    width: fit-content;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    transition: width 2s ease;
+    overflow: hidden;
+
+}
+
+.sidebar.active {
+    transition: left .2s ease;
+    display: block;
+    left: 0%;
+}
+
+
+.sidebar a {
+
+    width: 60px;
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.sidebar .link.aktif i {
+    color: var(--biru-btn);
+}
+
+/* .sidebar p:hover {
+    color: var(--putih);
+    background-color: var(--biru-btn);
+} */
+
+.sidebar a p {
+    margin: 0 1rem 0 0;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.sidebar a i {
+    margin: 0 1rem;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--hitam);
+}
+
+.sidebar a p {
+    width: 170px;
+    white-space: nowrap;
+}
+
+
+.sidebar a:hover {
+    background: #00000059;
+}
+
+.sidebar:hover a {
+    width: 200px;
+}
+
+/* .sidebar a:last-child p {
+    border-bottom: 1px solid #000;
+} */
+
+.user-menu {
+    z-index: 999;
+    cursor: pointer;
+    /* border-radius: 1rem ; */
+    position: absolute;
+    right: 96%;
+    /* top: 5%; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    width: 30px;
+    height: 30px;
+    color: var(--biru-btn);
+    font-size: 2.5rem;
+    /* background-color: var(--biru-btn); */
+}
+
+.form.dashboard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.laporan {
+    width: 90%;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.grup {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.laporan.khusus {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-title.dashboard {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.laporan label {
+    padding: .3rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    margin-left: 0;
+    width: fit-content;
+    background-color: var(--ungu);
+}
+
+.input-laporan {
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    resize: none;
+    outline: none;
+    background-color: var(--putih);
+    box-shadow: var(--box-shadow);
+    /* outline: 1px solid #44444449; */
+    border: 1px solid #44444449;
+    width: 100%;
+    white-space: normal;
+}
+
+.input-laporan.invalid {
+    border: 2px solid var(--merah-delete);
+}
+
+
+
+.input-laporan.lapor {
+    height: 282px;
+}
+
+.input-laporan.alamat {
+    height: 147px;
+}
+
+.input-laporan.foto {
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.input-laporan.nama,
+.input-laporan.tentang {
+    width: 100%;
+}
+
+.btn.submit {
+    margin-top: 2rem;
+}
+
+.search-user{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.search-user form .input-user{
+    padding: .1rem .5rem;
+}
+
+.search-user form button{
+    border-radius: .5rem;
+    border:  solid var(--biru-btn);
+    outline: none;
+    color: var(--putih);
+    background-color: var(--biru-btn);
+    cursor: pointer;
+    padding: .1rem .5rem;
+}
+
+
+/*=============================== dashboard masyarakat display =======================================*/
+/*=============================== dashboard masyarakat display =======================================*/
+/*=============================== dashboard masyarakat display  =======================================*/
+
+
+
+/*=============================== daftar laporan =======================================*/
+/*=============================== daftar laporan =======================================*/
+/*=============================== daftar laporan  =======================================*/
+.main-title.daftar {
+    width: fit-content;
+    font-size: 2rem;
+    position: relative;
+    margin-left: 4rem;
+
+}
+
+.main-title.daftar::after {
+    font-size: 2rem;
+    display: flex;
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    background-color: var(--ungu);
+    right: 0;
+    top: 100%;
+}
+
+.container.daftar {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.card-daftar {
+    overflow: hidden;
+    position: relative;
+    background-color: var(--putih);
+    box-shadow: var(--box-shadow);
+    border: 2px solid var(--kuning-validasi);
+    border-radius: 25px;
+    width: 100%;
+    padding: 2rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.group:first-child {
+    align-items: center;
+}
+
+.group:last-child {
+    width: 0;
+    align-items: center;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: calc(100%/4);
+    margin: 0 2rem;
+}
+
+.card-daftar .title-daftar {
+    background-color: var(--ungu);
+    width: fit-content;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: .3rem 1rem;
+
+}
+
+.card-daftar .img-container {
+    display: block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.card-daftar .img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.input-laporan.hasil {
+    font-size: 1.5rem;
+    width: 100%;
+    height: 163px;
+    background-color: var(--putih-bg);
+}
+
+.input-laporan.hasil.alamat {
+    font-size: 1.5rem;
+    width: 100%;
+    height: 163px;
+    background-color: var(--putih-bg);
+}
+
+.status {
+    position: absolute;
+    display: block;
+    border-radius: 60%;
+    width: 30px;
+    height: 30px;
+    background-color: var(--kuning-validasi);
+    right: -5px;
+    top: -5px;
+}
+
+.status.validate {
+    background-color: var(--hijau-status);
+}
+
+.btn-delete {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: fit-content;
+    border-radius: 25px 0 2rem 0rem;
+    font-size: 2rem;
+    padding: 1.5rem;
+    color: var(--putih);
+    border: none;
+    outline: none;
+    background-color: var(--merah-delete);
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    transform: scale(1.11);
+}
+
+.btn-delete:hover i {
+    transform: scale(1.1);
+}
+
+.btn-single {
+    text-align: start;
+    cursor: pointer;
+    bottom: 40%;
+    right: -20px;
+    height: 80px;
+    position: absolute;
+    width: 40px;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+    padding: 2rem .5rem;
+    color: var(--putih);
+    border: none;
+    outline: none;
+    background-color: var(--ungu);
+    transition: transform .3s ease;
+}
+
+.btn-single:hover {
+    transform: translateX(-10px);
+}
+
+.btn-single:hover i {
+    transform: scale(1.5);
+}
+
+.card-daftar.validate {
+    border: 2px solid var(--hijau-status);
+}
+
+/*=============================== daftar laporan =======================================*/
+/*=============================== daftar laporan =======================================*/
+/*=============================== daftar laporan  =======================================*/
+
+/*=============================== Table Data user =======================================*/
+/*=============================== Table Data user =======================================*/
+/*=============================== Table Data user  =======================================*/
+
+.wrapper.table {
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 2rem;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    justify-content: start;
+
+}
+
+.container.table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.search-form {
+    display: inline-flex;
+}
+
+.search-bar-group {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: #0022d6; */
+    width: 90%;
+    justify-content: space-between;
+}
+
+.search-bar-group form input {
+    padding: 1px 2px;
+}
+
+.search-bar-group .show {
+    width: 40px;
+    margin: 0 5px;
+}
+
+table {
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--putih);
+    border: var(--border--putih);
+    box-shadow: var(--box-shadow);
+}
+
+thead tr th {
+    text-align: center;
+    padding: 1rem;
+}
+
+thead tr th p {
+    text-align: center;
+    padding: .1rem 1rem;
+    border-radius: 20px;
+    width: 100%;
+    background: var(--ungu);
+    font-size: 1.4rem;
+}
+
+tbody {
+    margin-top: 10rem;
+
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+}
+
+tbody tr td .action-btn a {
+    margin-right: 1rem;
+}
+
+tbody tr td {
+    max-width: 100px;
+    width: calc(100%/4);
+    overflow-x: auto;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+
+/*=============================== Table Data user =======================================*/
+/*=============================== Table Data user =======================================*/
+/*=============================== Table Data user  =======================================*/
+
+/*=============================== Single-lapor =======================================*/
+/*=============================== Single-lapor =======================================*/
+/*=============================== Single-lapor  =======================================*/
+.wrapper.single {
+    align-items: start;
+    justify-content: center;
+    padding: 10rem 2rem;
+}
+
+.card-lapor {
+    display: flex;
+    align-items: self-start;
+    justify-content: start;
+    text-align: start;
+    background-color: var(--putih);
+    box-shadow: var(--box-shadow);
+    border: var(--border--putih);
+    border-radius: 25px;
+    width: 100%;
+    padding: 2rem;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    overflow: hidden;
+}
+
+.card-lapor .content {
+    margin: .5rem 0;
+    width: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    text-transform: capitalize;
+
+}
+
+.card-lapor h1 {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0 10rem 0;
+}
+
+.card-lapor .content h4 {
+    width: 100px;
+    margin-right: 1rem;
+}
+
+.card-lapor .content p {
+    font-weight: 500;
+    letter-spacing: .5px;
+    margin-left: 1rem;
+}
+
+.card-lapor .content.lapor p {
+    font-weight: 500;
+    letter-spacing: .5px;
+    /* width: 90%; */
+    word-break: break-word;
+}
+
+.content.foto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bukti-wrapper {
+    display: flex;
+    width: 160px;
+    margin: 0 1rem;
+}
+
+.group-bukti {
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.back-from-single i {
+    color: var(--biru-btn);
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+@media print {
+    .header {
+        display: none;
+    }
+
+    .user-menu {
+        display: none;
+    }
+
+    .main-title.daftar {
+        display: none;
+    }
+
+    .container.dua,
+    .btn.btn.print {
+        display: none;
+    }
+
+    .content-comment {
+        display: none;
+    }
+
+    .pagination {
+        display: none;
+    }
+
+    .validation form input,
+    .validation form label {
+        display: none;
+    }
+
+    .card-lapor {
+        border: none;
+        box-shadow: none;
+        padding: 10rem 5rem;
+        display: block;
+        min-height: 100vh;
+    }
+
+    .card-lapor .content {
+        margin: 1rem 0;
+        font-size: 2rem;
+        width: 100%;
+
+    }
+
+    .card-lapor h1 {
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0 20rem 0;
+    }
+
+}
+
+.container.dua {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 10rem;
+    width: 100%;
+}
+
+.btn.print {
+    margin: 1rem 0;
+    align-self: flex-end;
+    color: var(--putih);
+    border-radius: unset;
+    background-color: var(--biru-btn);
+}
+
+.content-comment {
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.comment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-field {
+    font-size: 14.88px;
+}
+
+.comment textarea {
+    font-size: 1.7rem;
+    resize: none;
+    padding: 2rem 1rem;
+}
+
+.content-comments {
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 3rem 0;
+    background-color: var(--putih);
+    border: var(--border--putih);
+    box-shadow: var(--box-shadow);
+}
+
+.account-comment {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.account-comment #profile {
+    font-size: 4rem;
+}
+
+.account-comment .name {
+    margin-left: 1rem;
+    font-size: 14.88px;
+}
+
+.validation {
+    align-items: center;
+    display: flex;
+}
+
+.validation form {
+    align-items: center;
+    display: flex;
+}
+
+.validation form label {
+    margin-right: .5rem;
+    font-size: 1.5rem;
+}
+
+
+
+
+/* beda sendiri */
+.user-change {
+    border-top: 2px solid var(--biru-teks);
+    border-bottom: 2px solid var(--biru-teks);
+    margin: 0 0 5rem 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+.user-change a {
+    padding: .5rem 0;
+    font-size: 1;
+    color: var(--biru-btn);
+    text-decoration: none;
+    text-align: center;
+    width: calc(100%/2);
+}
+
+.user-change a:hover {
+    transition: color .1s ease;
+    transition: background-color .5s ease;
+    background-color: var(--biru-teks);
+    color: var(--putih);
+}
+
+/* beda sendiri */
+
+/*=============================== Single-lapor =======================================*/
+/*=============================== Single-lapor =======================================*/
+/*=============================== Single-lapor  =======================================*/
+
+
+/*=============================== Media Querys =======================================*/
+/*=============================== Media Querys =======================================*/
+/*=============================== Media Querys =======================================*/
+
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+
+    }
+
+    /* daftar laporan */
+    .input-laporan.hasil,
+    .input-laporan.hasil.alamat {
+        width: 100%;
+    }
+
+    .card-daftar .img-container {
+
+        width: 120px;
+        height: 120px;
+
+    }
+
+    /* daftar laporan */
+}
+
+
+@media(max-width:768px) {
+    html {
+        font-size: 53%;
+
+    }
+
+    /* header */
+
+
+    .header {
+        padding: .1rem 3rem;
+    }
+
+    .header-title h3 {
+        text-transform: capitalize;
+        letter-spacing: .5px;
+        margin-left: .5rem;
+        color: var(--biru-teks);
+        font-size: 1.3rem;
+
+    }
+
+    .header .logo {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .header .logo img {
+        width: 100%;
+    }
+
+    .btn {
+        margin: 0rem .3rem;
+        padding: .5rem 1.6rem;
+        font-size: 1.3rem;
+    }
+
+    /* header */
+
+    /* login and register menu */
+
+    .form.login {
+        width: 30rem;
+        min-height: 30rem;
+    }
+
+    .main-title.daftar {
+
+        margin-top: 7rem;
+    }
+
+    /* login and register menu */
+
+    /*homepage display*/
+
+    .btn.lapor {
+        margin: 0rem .5rem;
+        padding: .7rem 2rem;
+        font-size: 1.5rem;
+    }
+
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(100%/2.5);
+    }
+
+    /*homepage display */
+
+    /* dashboard */
+    .sidebar {
+        width: 45%;
+    }
+
+    .laporan {
+        width: 100%;
+    }
+
+    .main-title.dashboard {
+        margin-top: 7rem;
+    }
+
+    /* dashboard */
+    /* single lapor */
+
+
+
+    /* single lapor */
+
+
+
+
+
+}
+
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+
+    }
+
+    /* header */
+
+    .card-lapor {
+        flex-direction: column;
+    }
+
+    .card-lapor .content {
+
+        width: unset;
+
+
+    }
+
+    .card-lapor .content h4 {
+        width: unset;
+    }
+
+
+    .header {
+        padding: .1rem 1rem;
+    }
+
+    .header-title h3 {
+        text-transform: capitalize;
+        letter-spacing: .5px;
+        margin-left: .5rem;
+        color: var(--biru-teks);
+        font-size: 1rem;
+
+    }
+
+    .header .logo {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .header .logo img {
+        width: 100%;
+    }
+
+    .btn {
+        margin: 0rem .3rem;
+        padding: .3rem 1.3rem;
+        font-size: 1rem;
+    }
+
+    /* header */
+    /* login and register */
+    .wrapper.login {
+        top: 600%;
+    }
+
+    .wrapper.register {
+        top: 600%;
+    }
+
+    /* login and register */
+
+    /* card homepage*/
+    .card {
+        width: calc(100%/1.5);
+    }
+
+    /* card homepage */
+
+    /* dashboard */
+    .account-box .name {
+        margin-right: 1rem;
+        font-size: 1.2rem;
+
+    }
+
+    .account-box #profile {
+        font-size: 2rem;
+    }
+
+
+    /* dashboard */
+    /* daftar-laporan */
+    .card-daftar {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .input-laporan {
+        width: 100%;
+    }
+
+    .group {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .btn-single {
+        top: 10%;
+        bottom: unset;
+    }
+
+    /* daftar-laporan */
+
+    /* table-layout */
+    table {
+
+        margin: 4rem 0;
+    }
+
+    thead {
+        display: none;
+    }
+
+    .page {
+        margin-top: 1rem;
+        bottom: unset;
+        right: 2rem;
+    }
+
+    tbody tr td a {
+        margin: 1rem 0;
+    }
+
+    tbody tr td {
+        background-color: var(--putih);
+        border: var(--border--putih);
+        box-shadow: var(--box-shadow);
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        max-width: unset;
+        width: 100%;
+        /* overflow-x: auto; */
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+
+    /* table-layout */
+    .wrapper.dashboard {
+        padding: 5rem 2rem;
+    }
+
+    /* single lapor */
+
+
+
+    /* single lapor */
+    .user-menu {
+        top: 10%;
+    }
+
+}
+
+
+/*=============================== Media Querys =======================================*/
+/*=============================== Media Querys =======================================*/
+/*=============================== Media Querys =======================================*/
